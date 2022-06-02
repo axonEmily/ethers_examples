@@ -1,0 +1,9 @@
+//根據‘from’地址和nonce查找對應的合約地址，也就是部署合約的人(不限於網絡，mainnet和testnet都能找到，他們的nonce是不一樣的)
+const { ethers } = require("ethers");
+
+let transaction = {
+  from: "0x4acfe3d1ee80d4875a3f99282bf0594de6f57d29", //emily1的地址
+  nonce: 0,
+};
+
+console.log(ethers.utils.getContractAddress(transaction));
